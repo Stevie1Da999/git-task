@@ -1,0 +1,9 @@
+UI LAYOUT PLAN
+
+Header: Cape Market logo/name, Products, Cart, My Stores, Login/Register or Logout.
+Home: simple hero section followed by product cards showing store, description, price and stock.
+Product page: full product information, cart form and reviews.
+Vendor area: each vendor store displayed with edit/delete controls and its product list.
+Cart: table showing product, quantity, price, subtotal and order total.
+Forms: clean single-column panels for registration, login, stores, products, reviews and password reset.
+Responsive layout: product cards wrap automatically on smaller screens.

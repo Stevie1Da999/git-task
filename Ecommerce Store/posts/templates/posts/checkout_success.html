@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<div class="panel"><h2>Order complete</h2><p>Thanks for your order. Your order number is {{ order.pk }}.</p><p>Total: R{{ order.total }}</p><p>The invoice was sent using the configured email backend.</p></div>{% endblock %}

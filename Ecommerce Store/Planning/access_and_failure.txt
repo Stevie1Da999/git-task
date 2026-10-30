@@ -1,0 +1,13 @@
+ACCESS CONTROL AND FAILURE PLAN
+
+Authentication
+Django's built-in User model is used for usernames, emails and hashed passwords. A Profile stores whether the account is a buyer or vendor. Groups named Buyers and Vendors receive model permissions.
+
+Authorisation
+Views also check the user's role and ownership. A vendor query includes vendor=request.user, so a vendor cannot edit another vendor's store or product by changing a URL.
+
+Sessions
+The cart is saved as a dictionary in request.session. This lets the buyer move around the site while keeping the cart.
+
+Failures
+Invalid forms are shown again with errors. Missing objects return Django 404 pages. Out-of-stock products are rejected. Checkout uses a database transaction and locks product rows while stock is checked and reduced. Email uses fail_silently for the invoice so a temporary email problem does not destroy a completed order.
